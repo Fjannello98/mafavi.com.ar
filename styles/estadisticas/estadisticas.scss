@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+
+$azulmafa:  #27388a;
+$results:(
+     jugados: rgb(107, 184, 219),
+     ganados: rgb(107, 219, 107),
+     empatados: rgb(250, 250, 144),
+     perdidos: rgb(211, 117, 117),
+     rate: $azulmafa,
+
+
+);
+
+
+#main-estadisticas{
+    .estadisticas-partidos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        font-family: 'Rajdhani', sans-serif;
+
+        .partidos-card{
+            border: 1px solid white;
+            width: 20vw;
+            border-radius: 50px;
+            margin:1rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            h2{
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px; 
+                font-size: 25px; 
+                height: 50%;
+                width: 100%;   
+                text-align: top;
+                background-color: seashell;
+            }
+            h3 {
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px; 
+                font-size: 35px;
+                height: 50%;
+                width: 100%;  
+                color: $azulmafa;  
+                &:hover{
+                    opacity: .7;
+                }             
+            }
+            @each $result,$color in $results {
+                .#{$result}{
+                    background-color: $color;
+                }
+            }
+            .modal {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                position: absolute;
+                z-index:2;
+                height: 40vh;
+                right: 40vw;
+                left: 40vw;
+                display: none;
+                background-color: white;
+                border-radius: 10px;
+                text-align: center;
+                .modal-header{
+                    display: flex;
+                    flex-direction: row;
+                    h2{
+                       border-radius: 0;
+                       width: 90%;
+                    }
+                    i {
+                        text-align: right;
+
+                    }
+                }
+                .modal-table {
+                    overflow-y: scroll;
+                    height: 30vh;
+                    table {
+                       text-align: center; 
+                
+                    }
+                }   
+                .modal-table::-webkit-scrollbar{
+                    width: 7px;
+                }
+                .modal-table::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                }
+
+            }
+            @each $result,$color in $results {
+                .modal-#{$result}{
+                    border: 4px solid $color;
+                    .modal-header {
+                        background-color: $color;
+                        h2 {
+                            background-color: $color;
+                        }
+                    }
+                    .modal-table::-webkit-scrollbar-thumb {
+                        background-color: $color;
+                    }
+                }
+            }
+        }
+    }
+    .estadisticas-cancha{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-family: 'Rajdhani', sans-serif;
+        .cancha{
+            h2 {
+                background-color: white;
+                border-radius: 10px;
+                width:22vw;
+                height: 5vh;
+                text-align: center;
+                font-size: 30px;
+                margin: 5px;
+            }
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            .cancha-results-card {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    color: black;
+                    align-items: center;
+                    text-align: center;
+                  .cancha-result-list{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    background-color: white;
+                    h3 {
+                        text-align: center;
+                        color: $azulmafa;
+                        padding:30%;
+                        font-size: 1.7rem;
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                  }  
+
+                  @each $result,$color in $results {
+                    .#{$result}{
+                        background-color: $color;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+@media (max-width:1000px){
+    
+ #main-estadisticas{
+    .estadisticas-partidos{
+        .partidos-card{
+            width: 50vw;       
+            margin:0rem;
+            .modal{
+                right:10vw;
+                left: 10vw;
+            }
+        }
+    }
+ }         
+}

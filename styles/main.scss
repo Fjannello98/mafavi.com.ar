@@ -1,0 +1,119 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css); /*Fontawesome*/
+@import url(nav/nav.css); /*Nav styles*/
+@import url(footer/footer.css); /*Footer styles*/
+@import url(index/index.css);
+@import url(jugadores/jugadores.css);
+@import url(estadisticas/estadisticas.css);
+
+$azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
+*{
+    margin:0;
+    border:0;
+    padding: 0;
+    a {
+        text-decoration: none;
+    }
+}
+body {
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+/* Scroll bar de todas las páginas */
+body::-webkit-scrollbar{
+    width: 10px;
+    background-image: linear-gradient($azulmafa,black,$azulmafa);
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: $hoverazulmafa
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*Color de fondo de las páginas*/
+main{
+    background-image: linear-gradient($azulmafa,black,$azulmafa);
+}
+
+
+.page-title{
+    background-color: white;
+    border-radius: 10px;
+    width: 40vw;
+    position: relative;
+    right: 30vw;
+    left: 30vw;
+    margin-bottom: 10vh;
+    h1,h2 {
+        text-align:center;
+        color: $azulmafa;
+        font-family: 'Rajdhani', sans-serif;
+    }
+}
+
+@media (max-width:1000px){
+    .page-title{
+        width:80vw;
+        right: 10vw;
+        left: 10vw;
+    }
+}
+
+/*botones*/ 
+
+button{
+outline: none !important;
+     
+}
+.btn-outline-mafa {
+
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    &:hover{
+        background-color:white ;
+        color: $azulmafa ;
+        transform: scale(1.05);
+    }
+    &:active{
+        transform: scale(0.7);
+    }
+}
+
+.btn-outline-white {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $azulmafa;
+    color:$azulmafa;
+    padding: 0.5rem;
+    border-radius: 10px;
+    &:hover{
+        background-color:$azulmafa;
+        color: white ;
+        transform: scale(1.05);
+    }
+    &:active{
+        transform: scale(0.7);
+    }
+}
+
+
+
+.list-unstyled{
+    list-style: none !important;
+}
+
+
+.d-none{
+    display: none !important;
+}
+
+.text-white{
+    color:white !important;
+}

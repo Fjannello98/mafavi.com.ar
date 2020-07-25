@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap);
+
+$azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
+
+
+#cards_jugadores{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom:5rem;
+        font-family: 'Rajdhani', sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .card{
+            border-radius: 10px;
+            border:1px solid white;
+            height: 50vh;
+            margin: 2rem;
+            &:hover{
+                transform: scale(1.02);
+                -webkit-box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+                -moz-box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+                box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+            }
+            .card-img{
+                border-top-right-radius:10px;
+                border-top-left-radius:10px;
+                height: 25vh;
+            }
+            .card-text{
+                padding:0.7rem;
+                height: 10vh;
+                font-size: 20px;
+            }    
+                
+            .card-foot{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items: center;
+                button {
+                    height: 8vh;
+                    width:35%;
+                    border-radius: 30px;
+                    background-color: transparent;
+                    border:1px solid white;
+                    color: white;
+                    &:hover{
+                        background-color: $azulmafa;
+                        color: white;
+                        transform: scale(1.05);
+                    }
+                    &:active{
+                        transform: scale(0.95);
+                    }
+                }    
+                .number{
+                    font-size: 70px;
+                    position: relative;
+                    text-align: right;
+                    bottom: 10px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+        .jugador-modal{
+            display: none;
+            position: fixed;
+            z-index:2;
+            width: 50vw;
+            height: 50vh;
+            right:25vw;
+            left:25vw;
+            background-color: white;
+            border-radius: 30px;
+            .modal-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #27388a;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                color: white;
+                height: 10%;
+                h3{
+                    font-size: 2.2rem;
+                    i{
+                        position: absolute;
+                        right: 0;
+                        top:0;
+                        border-top-right-radius:30px ;
+                    }
+                }
+            }
+            .modal-body{
+                height: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .modal-text{
+                    color: black;
+                    width: 70%;
+                    .modal-nav{
+                        display: flex;
+                        flex-direction: row nowrap;
+                        justify-content: center;
+                        button{
+                            border-radius: 10px;
+                            border:1px solid $azulmafa;
+                            padding-left:2rem;
+                            padding-right:2rem;
+                            padding-top: 0.2rem;
+                            padding-bottom: 0.2rem;
+                        }
+                        .checked{
+                            background-color: #5bc0de;
+                            color:black;
+                        }
+                    }
+                    .modal-text-1{
+                        text-align: center;
+                        padding:1rem;
+                        font-size: 1.5rem;
+                        li{
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                            img{
+                                width: 30px;
+                            }
+                        }
+                    }
+                    .modal-text-2{
+                        display: none;
+                        height: 80%;
+                        overflow-y: scroll;
+                        padding:0.5rem;
+                        
+                    }
+                    .modal-text-2::-webkit-scrollbar{
+                        width: 10px;
+                        background-color: white;
+                    }
+                    .modal-text-2::-webkit-scrollbar-thumb {
+                        border-radius: 20px;
+                        background-color: $hoverazulmafa
+                    }
+                }
+                .modal-foto{
+                    border-bottom-right-radius: 30px !important;
+                    width: 30%;
+                    img{
+                        width: 100%;
+                        height: 40vh;
+                        position: relative;
+                        right:0 !important;
+                    }
+                }
+            }
+            .modal-footer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #27388a;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                width: 100%;
+                height: 10%;
+            }
+    
+    
+        }
+}   
+
+
+
+
+
+@media (max-width:1000px){
+  #cards_jugadores{  
+    .jugador-modal{
+        width: 90vw;
+        right: 5vw;
+        left: 5vw;
+        .modal-header{
+            h3{
+                font-size: 1.5rem;
+                i{
+                    position: relative;
+
+                }
+            }    
+        }
+        .modal-body{
+            .modal-foto{
+                img{
+                    height: 50%;
+                }
+            }
+        }
+
+    }
+  }  
+}

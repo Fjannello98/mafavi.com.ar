@@ -1,0 +1,268 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap);
+#cards_jugadores {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#cards_jugadores .card {
+  border-radius: 10px;
+  border: 1px solid white;
+  height: 50vh;
+  margin: 2rem;
+}
+
+#cards_jugadores .card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: -4px 0px 53px -1px #5a6bbe;
+  box-shadow: -4px 0px 53px -1px #5a6bbe;
+}
+
+#cards_jugadores .card .card-img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 25vh;
+}
+
+#cards_jugadores .card .card-text {
+  padding: 0.7rem;
+  height: 10vh;
+  font-size: 20px;
+}
+
+#cards_jugadores .card .card-foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cards_jugadores .card .card-foot button {
+  height: 8vh;
+  width: 35%;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+#cards_jugadores .card .card-foot button:hover {
+  background-color: #27388a;
+  color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#cards_jugadores .card .card-foot button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#cards_jugadores .card .card-foot .number {
+  font-size: 70px;
+  position: relative;
+  text-align: right;
+  bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cards_jugadores .jugador-modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 50vw;
+  height: 50vh;
+  right: 25vw;
+  left: 25vw;
+  background-color: white;
+  border-radius: 30px;
+}
+
+#cards_jugadores .jugador-modal .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #27388a;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: white;
+  height: 10%;
+}
+
+#cards_jugadores .jugador-modal .modal-header h3 {
+  font-size: 2.2rem;
+}
+
+#cards_jugadores .jugador-modal .modal-header h3 i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-right-radius: 30px;
+}
+
+#cards_jugadores .jugador-modal .modal-body {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text {
+  color: black;
+  width: 70%;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row nowrap;
+          flex-direction: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-nav button {
+  border-radius: 10px;
+  border: 1px solid #27388a;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-nav .checked {
+  background-color: #5bc0de;
+  color: black;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-text-1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-text-1 li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-text-1 li img {
+  width: 30px;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-text-2 {
+  display: none;
+  height: 80%;
+  overflow-y: scroll;
+  padding: 0.5rem;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-text-2::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-text .modal-text-2::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #5a6bbe;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-foto {
+  border-bottom-right-radius: 30px !important;
+  width: 30%;
+}
+
+#cards_jugadores .jugador-modal .modal-body .modal-foto img {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  right: 0 !important;
+}
+
+#cards_jugadores .jugador-modal .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #27388a;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+  height: 10%;
+}
+
+@media (max-width: 1000px) {
+  #cards_jugadores .jugador-modal {
+    width: 90vw;
+    right: 5vw;
+    left: 5vw;
+  }
+  #cards_jugadores .jugador-modal .modal-header h3 {
+    font-size: 1.5rem;
+  }
+  #cards_jugadores .jugador-modal .modal-header h3 i {
+    position: relative;
+  }
+  #cards_jugadores .jugador-modal .modal-body .modal-foto img {
+    height: 50%;
+  }
+}
+/*# sourceMappingURL=jugadores.css.map */

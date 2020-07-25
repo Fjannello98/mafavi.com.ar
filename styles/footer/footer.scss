@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+
+$azulmafa:  #27388a;
+$azulfooter:  #5b75fa;
+$hoverazulmafa:  #5a6bbe;
+
+footer {
+    position: relative;
+    bottom: 0 !important;
+    width: 100vw;
+    height: 15vh;
+    background-color: $azulfooter;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .wine-icon {
+        width: 5vw;
+        padding: 1rem;
+    }
+    .footer-address {
+        address {
+            list-style: none;
+            li {
+                font-family: 'Rajdhani', sans-serif;
+                color: white;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+    .footer-social-media {
+        display: inline-block;
+        a img {
+            width: 40px;
+            padding-top: 1rem;
+            &:hover{
+                transform: scale(1.07);
+            }
+        }
+    }
+    .footer-copyright {
+        position: absolute;
+        bottom: 0;
+        width: 30vw;
+        right: 35vw;
+        left: 35vw;
+        text-align: center;
+        color: white;
+        font-family: 'Rajdhani', sans-serif;
+        i {
+            color: $azulmafa;
+        }
+    }
+}
+
+
+@media (max-width:1000px){    
+  footer {
+      position: relative;
+      bottom: 0 !important;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 50vh;
+      justify-content: center;
+      align-items: center;
+  }
+  .wine-icon{
+      width: 10vw !important;
+  }
+  .footer-copyright {
+      position: relative !important;
+      right: 0 !important;
+      left: 0!important;
+  }
+}     

@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap); 
+
+$azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
+
+#menu {
+    a {
+        color: white !important;
+        text-decoration: none !important;
+    }
+    background-image: linear-gradient( $azulmafa,black, $azulmafa);
+    #slide-menu {
+        display: none;            
+    }
+    .nav-logo{
+       position: relative;
+       left: 47.5vw;
+       right: 47.5vw;
+       width:5vw;
+       &:hover {
+           transform: scale(1.02);
+       }
+    }  
+    
+    .menu-responsive-btn.open {
+        display: none;
+    }
+    #top-menu {
+        width:100vw;
+        height: auto;
+        nav ul {
+            li {
+                margin:1rem;
+                color: white;
+                display: inline-block;
+                text-transform: uppercase;
+                font-family:'Do Hyeon', sans-serif;
+                padding-bottom: 0.5rem;
+                &:hover {
+                    border-bottom: 2px solid $hoverazulmafa;
+                    transform: scale(1.02);
+                };
+                .submenu {
+                       display: none;
+                       padding: 0;
+                       
+                }
+            }   
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 1px $hoverazulmafa;
+            border-radius: 8px;
+            
+        }
+    }
+     
+}
+
+
+@media (max-width:1000px){
+    #menu-pc {
+        display: none;
+    }
+    .menu-responsive-btn {
+        position: relative;
+        display: block !important;
+        padding: 0.5rem;
+        background-color: white;
+        left: 0.5rem;
+        top: 0.5rem;
+        border-radius: 5px;
+        width: 10%;
+        border: 1px solid $azulmafa;        
+    }
+    
+    .nav-logo {
+        position: relative;
+        left: 40vw !important;
+        right: 40vw !important;
+        width:20vw !important; 
+    }
+    #slide-menu{
+     z-index: 3;
+     background-image: linear-gradient( $azulmafa,black, $azulmafa);
+     position: absolute;
+     height: 100vh;
+     width: 50vw;
+     .close {
+         width: 30%;
+     }
+     nav ul {
+        display: flex;
+        flex-direction: column;
+            li {
+                margin-top: 1rem;
+                color: white;
+                display: inline;
+                text-transform: uppercase;
+                font-family:'Do Hyeon', sans-serif;
+                padding-bottom: 0.5rem;
+                &:hover {
+                    transform: scale(1.02);
+                };
+                .submenu {
+                       display: none;
+                }
+            }   
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 1px $hoverazulmafa;
+            border-radius: 8px;  
+
+     }
+    } 
+}

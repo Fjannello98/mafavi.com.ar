@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title> Home | MaFaVi FC  </title> 
+    <meta charset="UTF-8">
+    <meta name="description" content="Home Page MaFaVi FC, equipo de Menores A">
+    <meta name="keywords" content="mafavi, cnba, campo, exalumno, campodejuego">
+    <meta name="author" content="Facundo Jannello">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="shortcut icon" href="images/icons/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/icons/favicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="js/data_partidos.js"></script>
+    <script defer src="js/data_jugadores.js"></script>
+    <script defer src="js/tabla_de_goleadores.js"></script>
+    <script defer src="js/index.js"></script>
+    <script defer src="js/nav.js"></script>
+    <script defer src="js/footer.js"></script>
+</head>
+<body>
+    <span id="nav"></span>
+    <main id="main-home">
+        <div class="main-foto">
+            <div id="main" class="opacity-div">
+                <h1>Sitio Oficial de MaFaVi FC</h1>
+                <hr>
+                <h2>Equipo de Menores A</h2>
+            </div>
+            <div id="subs" class="opacity-div">
+                <div id="sub1" class="opacity-div">
+                   <h2>¿Por qué MaFaVi?</h2>
+                     <hr>
+                     <p> Esta es la historia que le queríamos dejar al campo. Compartir con ustedes las mejores virtudes que tenemos, contarles cómo aprendimos a ser pacientes. Si llegaron hasta acá, significa que también lo fueron, que realmente les interesaba saber qué somos. No sólo lo que es MaFaVi, sino lo que significa para nosotros... </p>
+                    <button class="btn-outline-mafa"> <a>Ver más &raquo;</a></button>
+                </div>
+                <div id="sub2" class="opacity-div">
+                     <h2>Tabla de goleadores</h2>
+                     <hr>
+                     <ul class="list-unstyled" id="goleadores_index"></ul>
+                     <button class="btn-outline-mafa"><a>Ver más &raquo;</a></button>
+                 </div>
+             </div>
+             <img id="main-img" src="images/gol_patria.jpg"> 
+        </div> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="index_cards">
+                 <div id="card_1" class="card" onclick="Card_text(1)">  
+                        <img id="card_img_1" class="card-foto" src="images/mafamilia.jpeg" alt="Foto de equipo y amigos en el ascenso a Menores A">
+                        <div id="text_1" class="card-text"  data-text="1">
+                            <h3>MaFaVi es de la A</h3>
+                            <p>Una pelota que cazó Bitxo en el área abría el partido. Acqua en el final liquidaba la historia tras una gran jugada colectiva. <a>Seguir leyendo  &raquo;</a></p>
+                        </div>
+                        <div class="card-foot">
+                            <button class="btn-outline-mafa"><i id="arrow_1" class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                        </div> 
+                </div>  
+                <div id="card_2" class="card" onclick="Card_text(2)">  
+                        <img id="card_img_2" class="card-foto" src="images/el_camino_a_la_b.jpg" alt="Festejo de gol de Tenco a Segundo Semestre">
+                        <div id="text_2" class="card-text" data-text="2">
+                            <h3>El camino a la B</h3>
+                            <p>En el arranque del complemento, Bitxo desafiaría la física. El nro9 sacó un bombazo al arco directo sacando del medio que se estamparía contra la red de un distraído guardameta."¿Vale?"  <a>Seguir leyendo  &raquo;</a></p>
+                        </div>
+                        <div class="card-foot">
+                            <button class="btn-outline-mafa"><i id="arrow_2" class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                        </div> 
+               </div>  
+               <div id="card_3" class="card"  onclick="Card_text(3)">  
+                        <img id="card_img_3" class="card-foto" src="images/c_nos_dio.jpg" alt="Festejo del equipo en el ascenso a Menores C">
+                        <div id="text_3" class="card-text">
+                            <h3>"C" nos dió</h3>
+                            <p>En la última bola a contrareloj, se mandó al área un Facu plagado de desesperación. Gol en la última y delirio. Nació el "A lo MaFa".  <a>Seguir leyendo  &raquo;</a></p>
+                        </div>
+                        <div class="card-foot">
+                            <button class="btn-outline-mafa"><i id="arrow_3" class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                        </div> 
+               </div>  
+        </div>
+        <br>
+        <br>   
+        <br>
+        <br>
+    </main>
+    <span id="footer"></span>
+    <script>
+        var clicks = 0;
+function Card_text(show){
+       if (clicks%2 == 0){
+           $(`#text_${show}`).slideDown();
+           $(`#card_img_${show}`).css("height","55%");
+           $(`#card_${show}`).css("height","45vh");
+           $(`#arrow_${show}`).removeClass("fa-arrow-down").addClass("fa-arrow-up");
+       } 
+     else if (clicks%2 !== 0){
+           $(`#text_${show}`).slideUp();
+           $(`#card_img_${show}`).css("height","80%");
+           $(`#card_${show}`).css("height","30vh");
+           $(`#arrow_${show}`).removeClass("fa-arrow-up").addClass("fa-arrow-down");
+      }
+      clicks++
+}
+    </script>
+</body>
+</html>

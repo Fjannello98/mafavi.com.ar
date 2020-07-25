@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+#main-estadisticas .estadisticas-partidos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card {
+  border: 1px solid white;
+  width: 20vw;
+  border-radius: 50px;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card h2 {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  font-size: 25px;
+  height: 50%;
+  width: 100%;
+  text-align: top;
+  background-color: seashell;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card h3 {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-size: 35px;
+  height: 50%;
+  width: 100%;
+  color: #27388a;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card h3:hover {
+  opacity: .7;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .jugados {
+  background-color: #6bb8db;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .ganados {
+  background-color: #6bdb6b;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .empatados {
+  background-color: #fafa90;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .perdidos {
+  background-color: #d37575;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .rate {
+  background-color: #27388a;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: 2;
+  height: 40vh;
+  right: 40vw;
+  left: 40vw;
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-header h2 {
+  border-radius: 0;
+  width: 90%;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-header i {
+  text-align: right;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-table {
+  overflow-y: scroll;
+  height: 30vh;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-table table {
+  text-align: center;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-table::-webkit-scrollbar {
+  width: 7px;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal .modal-table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-jugados {
+  border: 4px solid #6bb8db;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-jugados .modal-header {
+  background-color: #6bb8db;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-jugados .modal-header h2 {
+  background-color: #6bb8db;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-jugados .modal-table::-webkit-scrollbar-thumb {
+  background-color: #6bb8db;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-ganados {
+  border: 4px solid #6bdb6b;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-ganados .modal-header {
+  background-color: #6bdb6b;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-ganados .modal-header h2 {
+  background-color: #6bdb6b;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-ganados .modal-table::-webkit-scrollbar-thumb {
+  background-color: #6bdb6b;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-empatados {
+  border: 4px solid #fafa90;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-empatados .modal-header {
+  background-color: #fafa90;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-empatados .modal-header h2 {
+  background-color: #fafa90;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-empatados .modal-table::-webkit-scrollbar-thumb {
+  background-color: #fafa90;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-perdidos {
+  border: 4px solid #d37575;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-perdidos .modal-header {
+  background-color: #d37575;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-perdidos .modal-header h2 {
+  background-color: #d37575;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-perdidos .modal-table::-webkit-scrollbar-thumb {
+  background-color: #d37575;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-rate {
+  border: 4px solid #27388a;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-rate .modal-header {
+  background-color: #27388a;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-rate .modal-header h2 {
+  background-color: #27388a;
+}
+
+#main-estadisticas .estadisticas-partidos .partidos-card .modal-rate .modal-table::-webkit-scrollbar-thumb {
+  background-color: #27388a;
+}
+
+#main-estadisticas .estadisticas-cancha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha h2 {
+  background-color: white;
+  border-radius: 10px;
+  width: 22vw;
+  height: 5vh;
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .cancha-result-list {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .cancha-result-list h3 {
+  text-align: center;
+  color: #27388a;
+  padding: 30%;
+  font-size: 1.7rem;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .cancha-result-list h3 span {
+  font-size: 1.2rem;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .jugados {
+  background-color: #6bb8db;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .ganados {
+  background-color: #6bdb6b;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .empatados {
+  background-color: #fafa90;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .perdidos {
+  background-color: #d37575;
+}
+
+#main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .rate {
+  background-color: #27388a;
+}
+
+@media (max-width: 1000px) {
+  #main-estadisticas .estadisticas-partidos .partidos-card {
+    width: 50vw;
+    margin: 0rem;
+  }
+  #main-estadisticas .estadisticas-partidos .partidos-card .modal {
+    right: 10vw;
+    left: 10vw;
+  }
+}
+/*# sourceMappingURL=estadisticas.css.map */

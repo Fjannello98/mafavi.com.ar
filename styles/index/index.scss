@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+
+$azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
+
+.main-foto {
+    width: 100vw;
+    height: 95vh;
+    img {
+        position: relative;
+        opacity: .4;
+        width: 100%;
+        height: 95vh;
+        z-index: 1;
+    }
+    .opacity-div {
+        position: absolute;
+        display: none;
+        background-color: $azulmafa;
+        opacity: .7;
+        z-index: 2;
+        border-radius: 10px;
+        text-align: center;
+        font-family: 'Rajdhani', sans-serif;
+        hr {
+            display: block;
+            margin-top: 0.2em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    }
+}
+#main {
+    width: 40vw;
+    right: 30vw;
+    left: 30vw;
+    height: 10vh;
+    top: 30vh;
+    bottom: 55vh;
+    padding: 5vh;
+    color: white;
+    font-size: 1rem;
+}
+#subs {
+    top:75vh;
+    opacity: .99999;
+    color:white;
+      #sub1{
+          left: 15vw;
+          width: 30vw;
+      }
+      #sub2{
+          left:60vw;
+          width:30vw;
+      }
+}
+#index_cards{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Rajdhani', sans-serif;
+
+    .card{
+        position: relative;
+        width: 20vw;
+        height: 31.5vh;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #5a6bbe;
+        &:hover{
+            transform: scale(1.02);
+            -webkit-box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+            -moz-box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+            box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+        }
+        &:active{
+            transform: scale(0.97);
+        }
+            .card-foto{
+                width:100%;
+                height: 80%;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+            .card-text{
+                background-image: linear-gradient($hoverazulmafa,$azulmafa,$hoverazulmafa);
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 30%;
+                padding: 0.2rem;
+                border-bottom: 1px solid white;
+                text-align: center;
+                  h3 {
+                      position: relative;
+                      top:2px !important;
+                  }
+                  p {
+                      font-size: 13px;
+                  }
+                display: none;  
+            }
+            .card-foot{
+                height: 15%;
+                position: relative;
+                bottom: 0 !important;
+                padding-top: 3px;
+                display: flex;
+                justify-content: center;
+                button {
+                    height: 60%;
+                    width: 20%;
+                    font-size:10px ;
+                    padding:0.1rem;
+                }
+            }
+    }    
+
+}
+
+
+
+
+
+@media (max-width:1000px){
+    .main-foto{
+        width: 100vw;
+        height: 95vh;
+         #main-img{
+          height: 95vh;
+          width: 100vw;
+         }
+        #main {
+            width: 60vw;
+            left: 15vw!important;
+            height: 20vh;
+            top: 25vh;
+            font-size: 0.8rem ;
+        }
+        #subs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #sub1 , #sub2 {
+                position: relative;
+                width: 95%;
+                font-size: 0.7rem;
+                padding: 0!important;
+                left: 0!important;
+                margin-bottom:10vh;
+            }
+            bottom: 60vh !important;
+        }
+    }
+    #index_cards{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10rem;
+        .card {
+            right:5vw;
+            left:5vw;
+            width:90vw;
+            margin-bottom: 5rem;
+            .card-text{
+                p{
+                    font-size:12px;
+                }
+            }
+        }
+    }
+}    
