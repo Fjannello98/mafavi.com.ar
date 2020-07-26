@@ -58,7 +58,7 @@
                             <p>Una pelota que cazó Bitxo en el área abría el partido. Acqua en el final liquidaba la historia tras una gran jugada colectiva. <a>Seguir leyendo  &raquo;</a></p>
                         </div>
                         <div class="card-foot">
-                            <button class="btn-outline-mafa"><i id="arrow_1" class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                            <button class="btn-outline-mafa"><i id="arrow_1" class="fa fa-info-circle" aria-hidden="true"></i></button>
                         </div> 
                 </div>  
                 <div id="card_2" class="card" onclick="Card_text(2)">  
@@ -68,7 +68,7 @@
                             <p>En el arranque del complemento, Bitxo desafiaría la física. El nro9 sacó un bombazo al arco directo sacando del medio que se estamparía contra la red de un distraído guardameta."¿Vale?"  <a>Seguir leyendo  &raquo;</a></p>
                         </div>
                         <div class="card-foot">
-                            <button class="btn-outline-mafa"><i id="arrow_2" class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                            <button class="btn-outline-mafa"><i id="arrow_2" class="fa fa-info-circle" aria-hidden="true"></i></button>
                         </div> 
                </div>  
                <div id="card_3" class="card"  onclick="Card_text(3)">  
@@ -78,7 +78,7 @@
                             <p>En la última bola a contrareloj, se mandó al área un Facu plagado de desesperación. Gol en la última y delirio. Nació el "A lo MaFa".  <a>Seguir leyendo  &raquo;</a></p>
                         </div>
                         <div class="card-foot">
-                            <button class="btn-outline-mafa"><i id="arrow_3" class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                            <button class="btn-outline-mafa"><i id="arrow_3" class="fa fa-info-circle" aria-hidden="true"></i></button>
                         </div> 
                </div>  
         </div>
@@ -86,25 +86,11 @@
         <br>   
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </main>
     <span id="footer"></span>
-    <script>
-        var clicks = 0;
-function Card_text(show){
-       if (clicks%2 == 0){
-           $(`#text_${show}`).slideDown();
-           $(`#card_img_${show}`).css("height","55%");
-           $(`#card_${show}`).css("height","45vh");
-           $(`#arrow_${show}`).removeClass("fa-arrow-down").addClass("fa-arrow-up");
-       } 
-     else if (clicks%2 !== 0){
-           $(`#text_${show}`).slideUp();
-           $(`#card_img_${show}`).css("height","80%");
-           $(`#card_${show}`).css("height","30vh");
-           $(`#arrow_${show}`).removeClass("fa-arrow-up").addClass("fa-arrow-down");
-      }
-      clicks++
-}
-    </script>
 </body>
 </html>
