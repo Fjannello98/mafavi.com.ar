@@ -3,7 +3,52 @@ $(document).ready(
 );
 
 
-
+var clicks_1 = 0;
+var clicks_2 = 0;
+var clicks_3 = 0;
+function Card_text(show){
+       switch (show){
+        case 1:
+            if (clicks_1%2 == 0){
+                $(`#text_${show}`).slideDown();
+                $(`#card_${show}`).css("height","80vh");
+                $(`#arrow_${show}`).removeClass("fa-info-circle").addClass("fa-angle-double-up");
+               } 
+               else if (clicks_1%2 !== 0){
+                $(`#text_${show}`).slideUp();
+                $(`#card_${show}`).css("height","50vh");
+                $(`#arrow_${show}`).removeClass("fa-angle-double-up").addClass("fa-info-circle");
+               }
+            clicks_1++;
+            break;
+        case 2:
+            if (clicks_2%2 == 0){
+                $(`#text_${show}`).slideDown();
+                $(`#card_${show}`).css("height","80vh");
+                $(`#arrow_${show}`).removeClass("fa-info-circle").addClass("fa-angle-double-up");
+               } 
+               else if (clicks_2%2 !== 0){
+                $(`#text_${show}`).slideUp();
+                $(`#card_${show}`).css("height","50vh");
+                $(`#arrow_${show}`).removeClass("fa-angle-double-up").addClass("fa-info-circle");
+               }
+            clicks_2++;
+            break;
+        case 3:
+            if (clicks_3%2 == 0){
+                $(`#text_${show}`).slideDown();
+                $(`#card_${show}`).css("height","80vh");
+                $(`#arrow_${show}`).removeClass("fa-info-circle").addClass("fa-angle-double-up");
+               } 
+               else if (clicks_3%2 !== 0){
+                $(`#text_${show}`).slideUp();
+                $(`#card_${show}`).css("height","50vh");
+                $(`#arrow_${show}`).removeClass("fa-angle-double-up").addClass("fa-info-circle");
+               }
+            clicks_3++;
+            break;        
+     }
+}
 
 
 var index_cards=[

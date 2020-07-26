@@ -202,4 +202,52 @@ $(".estadisticas-cancha").append(`
                     <div class="cancha-result-list goles"><h3>${Get_goles(partidos_cancha3,"v")} <img src="images/icons/autogol-icon.svg" alt="gol" width="30px" height="30px"></h3></div>  
             </div> 
     </div> 
-`)
+`);
+
+
+var max_jugados = jugadores;
+max_jugados.sort(function(a,b){
+    return (b.ganados+b.empatados+b.perdidos) - (a.ganados+a.empatados+a.perdidos)
+})
+max_jugados=max_jugados.splice(0,1);
+
+var max_goleador = jugadores;
+max_goleador.sort(function(a,b){
+    return (b.goles.menoresa+b.goles.menoresb+b.goles.menoresc+b.goles.menoresd+b.goles.copa) - (a.goles.menoresa+a.goles.menoresb+a.goles.menoresc+a.goles.menoresd+a.goles.copa)
+})
+max_goleador=max_goleador.splice(0,1);
+
+console.log(max_goleador)
+
+max_goleador.forEach(function(goleador){
+    $(".estadisticas-cards").append(               
+        `<div class="card">
+              <div class="card-foto">
+                <img src="${goleador.foto.carnet}" alt="${goleador.foto.alt}">
+              </div>
+              <div class="card-foot">
+                   <div class="title"><h2>Máximo goleador</h2></div>
+                   <h3>${goleador.nombre} ${goleador.apellido}</h2>
+                   <h3>${goleador.goles.menoresa+goleador.goles.menoresb+goleador.goles.menoresc+goleador.goles.menoresd+goleador.goles.copa} goles</h3> 
+                   <button class="btn-outline-mafa"><a href="html/tabla-de-goleadores.html">Ver tabla</a></button>    
+              </div>
+          </div>`);
+});
+max_jugados.forEach(function(jugador){
+    $(".estadisticas-cards").append(               
+        `
+        <div class="card">
+                <div class="card-foto">
+                <img src="${jugador.foto.carnet}" alt="${jugador.foto.alt}">
+                </div>
+                <div class="card-foot">
+                        <div class="title"><h2>Más partidos</h2></div>
+                        <h3>${jugador.nombre} ${jugador.apellido}</h2>
+                        <h3>${jugador.ganados+jugador.empatados+jugador.perdidos} jugados</h3> 
+                        <button class="btn-outline-mafa"><a href="html/tabla-de-goleadores.html">Ver tabla</a></button>  
+                </div>
+        </div>
+    `);   
+})  
+
+
