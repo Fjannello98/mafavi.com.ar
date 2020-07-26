@@ -1,0 +1,146 @@
+#main-historial .historial-partidos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main-historial .historial-partidos .card {
+  width: 25vw;
+  height: 40vh;
+  border-radius: 10px;
+  border: 8px solid white;
+  background-color: #27388a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#main-historial .historial-partidos .card .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+}
+
+#main-historial .historial-partidos .card .result .result-index {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: #5a6bbe;
+  text-align: center;
+  color: white;
+  margin: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-historial .historial-partidos .card .result img {
+  width: 70%;
+  height: 50%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+#main-historial .historial-partidos .card .result h2 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#main-historial .historial-partidos .card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+#main-historial .historial-partidos .card .info ul {
+  color: white;
+  font-size: 1.2rem;
+}
+
+#main-historial .historial-partidos .card .info .btn {
+  width: 80%;
+  font-size: 1rem;
+  margin: 3px;
+}
+
+@media (max-width: 400px) {
+  #main-historial .historial-partidos .card {
+    width: 80vw;
+    height: 40vh;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  #main-historial .historial-partidos .card {
+    width: 80vw;
+    height: 40vh;
+    margin-bottom: 10px;
+  }
+  #main-historial .historial-partidos .card .result img {
+    width: 40%;
+    height: 50%;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  #main-historial .historial-partidos .card .result h2 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 3px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  #main-historial .historial-partidos .card {
+    width: 60vw;
+    height: 40vh;
+  }
+  #main-historial .historial-partidos .card .result img {
+    width: 40%;
+    height: 50%;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  #main-historial .historial-partidos .card .result h2 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 3px;
+  }
+}
+/*# sourceMappingURL=historial-de-partidos.css.map */

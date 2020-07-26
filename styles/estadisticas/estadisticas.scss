@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
 
 $azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
 $results:(
      jugados: rgb(107, 184, 219),
      ganados: rgb(107, 219, 107),
@@ -140,8 +141,8 @@ $results:(
                     align-items: center;
                     text-align: center;
                   .cancha-result-list{
-                    width: 100px;
-                    height: 100px;
+                    width: 110px;
+                    height: 110px;
                     border-radius: 100%;
                     background-color: white;
                     h3 {
@@ -159,13 +160,87 @@ $results:(
                     .#{$result}{
                         background-color: $color;
                     }
+                  }
+            }
+
+        }
+    }
+    .estadisticas-cards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .card{
+            height: 70vh;
+            width: 25vw;
+            border-radius: 20px;
+            transition-property: opacity,visibility;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            .card-foto{
+                height: 70%;
+                width: 100%;
+                img{
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    width: 100%;
+                    height: 100%;
                 }
             }
+            .card-foot{
+                height: 30%;
+                background-color: $azulmafa;
+                color:white;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                font-family:'Rajdhani', sans-serif ;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                button {
+                    align-self: flex-end;
+                    border-radius: 20px;
+                    width:25%;
+                    font-size: 1.2rem;
+                    font-family:'Rajdhani', sans-serif ;
+                    a {
+                        text-decoration: none;
+                        color:white;
+                    }
+                    &:hover{
+                        a {color:$azulmafa}
+                    }
+                }   
+            }
+            &:hover{
+                -webkit-box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+                -moz-box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+                box-shadow: -4px 0px 53px -1px rgba(90,107,190,1);
+            }    
 
         }
     }
 }
 
+@media (max-width:400px){
+    .estadisticas-cards{
+        .card{
+            width: 80vw!important;
+            margin: 1rem !important;
+            
+        }
+
+    }
+
+}
+
+@media (min-width:700px) and (max-width:1000px){
+    .estadisticas-cards{
+        .card{
+            width: 35vw!important;
+            margin: 1rem !important;
+        }
+    }
+}
 
 
 @media (max-width:1000px){
@@ -179,6 +254,12 @@ $results:(
                 right:10vw;
                 left: 10vw;
             }
+        }
+    }
+    .estadisticas-cards{
+        .card{
+            width: 60vw;
+            margin-bottom: 1rem;
         }
     }
  }         

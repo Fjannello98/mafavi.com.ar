@@ -1,0 +1,132 @@
+
+$azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
+
+#main-historial{
+    .historial-partidos{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .card{
+            width: 25vw;
+            height: 40vh;
+            border-radius: 10px;
+            border: 8px solid white;
+            background-color: $azulmafa;
+            display:flex;
+            flex-flow: row wrap;
+            .result {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-around;
+                width: 50%;
+                .result-index{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 100%;
+                    background-color: $hoverazulmafa;
+                    text-align: center;
+                    color: white;
+                    margin: 3px;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                }
+                img {
+                width: 70%;
+                height: 50%;
+                padding-left: 15%;
+                padding-right: 15%;
+                }
+                h2{
+                    color:white;
+                    text-align: center;
+                    font-size: 3rem;
+                }
+
+            }
+            .info{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                width: 50%;
+                ul{
+                    color: white;
+                    font-size: 1.2rem;
+                }
+                .btn{
+                    width: 80%;
+                    font-size: 1rem;
+                    margin: 3px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:400px){
+      #main-historial {
+        .historial-partidos{
+            .card{
+                width: 80vw;
+                height: 40vh;
+            }
+        }        
+      }
+}
+
+@media (min-width:400px) and (max-width:600px){
+    #main-historial {
+      .historial-partidos{
+          .card{
+              width: 80vw;
+              height: 40vh;
+              margin-bottom: 10px;
+              .result {
+                img {
+                width: 40%;
+                height: 50%;
+                padding-left: 30%;
+                padding-right: 30%;
+                }
+                h2{
+                    color:white;
+                    text-align: center;
+                    font-size: 2rem;
+                    padding:0;
+                    margin:3px
+                }
+
+            }
+          }
+      }        
+    }
+}
+
+@media (min-width:600px) and (max-width:1000px){
+    #main-historial {
+      .historial-partidos{
+          .card{
+              width: 60vw;
+              height: 40vh;
+              .result {
+                img {
+                width: 40%;
+                height: 50%;
+                padding-left: 30%;
+                padding-right: 30%;
+                }
+                h2{
+                    color:white;
+                    text-align: center;
+                    font-size: 2rem;
+                    padding:0;
+                    margin:3px
+                }
+
+            }
+          }
+      }        
+    }
+}

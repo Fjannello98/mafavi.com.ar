@@ -1,0 +1,428 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap);
+#main-tabla-de-goleadores .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#main-tabla-de-goleadores .list .goleador {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 7fr;
+      grid-template-columns: 2fr 7fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 1rem;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-posicion {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #5a6bbe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-posicion h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  border: 1px solid white;
+  width: 50vw;
+  height: 40vh;
+  border-radius: 20px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  background-color: #5a6bbe;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto {
+  -ms-grid-row: 2;
+  grid-row: 2fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h2, #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h3 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h2 {
+  font-size: 2rem;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h3 {
+  font-size: 1.5rem;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos {
+  -ms-grid-row: 2;
+  grid-row: 2fr;
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos div h2 {
+  font-size: 4rem;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos div img {
+  width: 3rem;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos h3 {
+  font-size: 2rem;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .partidos {
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+  -ms-grid-row: 2;
+  grid-row: 2fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-tabla-de-goleadores .list .goleador .goleador-data .partidos ul li {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 750px) {
+  #main-tabla-de-goleadores .list .goleador {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4fr;
+        grid-template-columns: 1fr 4fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    padding: 1rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-posicion {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 1rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: #5a6bbe;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-posicion h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    border: 1px solid white;
+    width: 60vw;
+    height: 40vh;
+    border-radius: 20px;
+    padding-top: 1rem;
+    background-color: #5a6bbe;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto {
+    -ms-grid-row: 1;
+    grid-row: 1fr;
+    -ms-grid-column: 1;
+    grid-column: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h2, #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h3 {
+    text-align: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h2 {
+    font-size: 1.2rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h3 {
+    font-size: 1rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos {
+    -ms-grid-row: 1;
+    grid-row: 1fr;
+    -ms-grid-column: 1;
+    grid-column: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos div h2 {
+    font-size: 2rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos div img {
+    width: 1.5rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos h3 {
+    font-size: 1.5rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .partidos {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    position: relative;
+    bottom: 3rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .partidos ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1250px) {
+  #main-tabla-de-goleadores .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  #main-tabla-de-goleadores .list .goleador {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 4fr;
+        grid-template-columns: 2fr 4fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    padding: 1rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-posicion {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #5a6bbe;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-posicion h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    border: 1px solid white;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 20px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    background-color: #5a6bbe;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto {
+    -ms-grid-row: 2;
+    grid-row: 2fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h2, #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h3 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h2 {
+    font-size: 1.7rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .rounded-foto h3 {
+    font-size: 1.2rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos {
+    -ms-grid-row: 2;
+    grid-row: 2fr;
+    -ms-grid-column: 1;
+    grid-column: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos div h2 {
+    font-size: 3rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos div img {
+    width: 2rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .goles-partidos h3 {
+    font-size: 1.2rem;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .partidos {
+    -ms-grid-column: 1;
+    grid-column: 1fr;
+    -ms-grid-row: 2;
+    grid-row: 2fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main-tabla-de-goleadores .list .goleador .goleador-data .partidos ul li {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=tabla-de-goleadores.css.map */

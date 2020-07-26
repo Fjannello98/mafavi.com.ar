@@ -274,8 +274,8 @@
 }
 
 #main-estadisticas .estadisticas-cancha .cancha .cancha-results-card .cancha-result-list {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 100%;
   background-color: white;
 }
@@ -311,6 +311,99 @@
   background-color: #27388a;
 }
 
+#main-estadisticas .estadisticas-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main-estadisticas .estadisticas-cards .card {
+  height: 70vh;
+  width: 25vw;
+  border-radius: 20px;
+  -webkit-transition-property: opacity,visibility;
+  transition-property: opacity,visibility;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main-estadisticas .estadisticas-cards .card .card-foto {
+  height: 70%;
+  width: 100%;
+}
+
+#main-estadisticas .estadisticas-cards .card .card-foto img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+#main-estadisticas .estadisticas-cards .card .card-foot {
+  height: 30%;
+  background-color: #27388a;
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-estadisticas .estadisticas-cards .card .card-foot button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-radius: 20px;
+  width: 25%;
+  font-size: 1.2rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#main-estadisticas .estadisticas-cards .card .card-foot button a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-estadisticas .estadisticas-cards .card .card-foot button:hover a {
+  color: #27388a;
+}
+
+#main-estadisticas .estadisticas-cards .card:hover {
+  -webkit-box-shadow: -4px 0px 53px -1px #5a6bbe;
+  box-shadow: -4px 0px 53px -1px #5a6bbe;
+}
+
+@media (max-width: 400px) {
+  .estadisticas-cards .card {
+    width: 80vw !important;
+    margin: 1rem !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .estadisticas-cards .card {
+    width: 35vw !important;
+    margin: 1rem !important;
+  }
+}
+
 @media (max-width: 1000px) {
   #main-estadisticas .estadisticas-partidos .partidos-card {
     width: 50vw;
@@ -319,6 +412,10 @@
   #main-estadisticas .estadisticas-partidos .partidos-card .modal {
     right: 10vw;
     left: 10vw;
+  }
+  #main-estadisticas .estadisticas-cards .card {
+    width: 60vw;
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=estadisticas.css.map */

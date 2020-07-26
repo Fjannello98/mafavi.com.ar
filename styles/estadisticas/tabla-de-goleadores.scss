@@ -1,0 +1,285 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&family=Rajdhani:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap);
+
+$azulmafa:  #27388a;
+$hoverazulmafa:  #5a6bbe;
+
+
+#main-tabla-de-goleadores{
+    .list{
+        display: flex;
+        flex-flow:column wrap;
+        justify-content: center;
+        align-content: center;
+        font-family: 'Rajdhani', sans-serif;
+        .goleador{
+            display: grid;
+            grid-template-columns: 2fr 7fr;
+            grid-template-rows: 1fr;
+            padding: 1rem;
+                .goleador-posicion{
+                    align-self: center;
+                    margin: 1rem;
+                    width:100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    background-color: $hoverazulmafa;
+                    display: flex;
+                    flex-direction: row;
+                    align-items:center;
+                    justify-content: center;
+                    h3 {
+                        text-align: center;
+                        font-size: 3rem;
+                        color: white;
+                    }
+                }
+                .goleador-data{
+                    display: grid;
+                    grid-template-rows: repeat(2,1fr);
+                    grid-template-columns: repeat(3,1fr);
+                    border:1px solid white;
+                    width: 50vw;
+                    height: 40vh;
+                    border-radius: 20px;
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                    padding-top:1rem;
+                    background-color: $hoverazulmafa;
+                    .rounded-foto{
+                        grid-row: 2fr;
+                        display: flex;
+                        flex-flow: column wrap;
+                        align-items: center;
+                        img {
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 100%;
+                        }
+                        h2,h3 {
+                            margin-top: 1rem;
+                            text-align: center;
+                        }
+                        h2{font-size: 2rem;}
+                        h3{font-size: 1.5rem;}
+                    }
+                    .goles-partidos{
+                        grid-row: 2fr;
+                        grid-column: 1fr;
+                        display: flex;
+                        flex-flow: column wrap;
+                        align-content: center;
+                        justify-content: center;
+                        div{
+                            h2{
+                            font-size: 4rem;
+                            } 
+                            img{
+                                width:3rem ;
+                            }
+                        }
+                        h3 {
+                            font-size: 2rem;
+                        }
+                    }
+                    .partidos{
+                        grid-column: 1fr;
+                        grid-row:2fr;
+                        display: flex;
+                        flex-flow: column wrap;
+                        align-content: center;
+                        justify-content: center;
+                        ul{
+                            li{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+
+@media (max-width:750px){
+    #main-tabla-de-goleadores{
+        .list{
+            .goleador{
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                grid-template-rows: 1fr;
+                padding: 1rem;
+                    .goleador-posicion{
+                        align-self: center;
+                        margin: 1rem;
+                        width:70px;
+                        height: 70px;
+                        border-radius: 100%;
+                        background-color: $hoverazulmafa;
+                        display: flex;
+                        flex-direction: row;
+                        align-items:center;
+                        justify-content: center;
+                        h3 {
+                            text-align: center;
+                            font-size: 3rem;
+                            color: white;
+                        }
+                    }
+                    .goleador-data{
+                        display: grid;
+                        grid-template-rows: repeat(2,1fr);
+                        grid-template-columns: repeat(2,1fr);
+                        border:1px solid white;
+                        width: 60vw;
+                        height: 40vh;
+                        border-radius: 20px;
+                        padding-top:1rem;
+                        background-color: $hoverazulmafa;
+                        .rounded-foto{
+                            grid-row: 1fr;
+                            grid-column: 1fr;
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-items: center;
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 100%;
+                            }
+                            h2,h3 {
+                                text-align: center;
+                            }
+                            h2{font-size: 1.2rem;}
+                            h3{font-size: 1rem;}
+                        }
+                        .goles-partidos{
+                            grid-row: 1fr;
+                            grid-column: 1fr;
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: center;
+                            justify-content: center;
+                            div{
+                                h2{
+                                font-size: 2rem;
+                                } 
+                                img{
+                                    width:1.5rem ;
+                                }
+                            }
+                            h3 {
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .partidos{
+                            grid-column: 2;
+                            position: relative;
+                            bottom:3rem;
+                            ul{
+                                li{
+                                    font-size: 0.95rem;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    }
+} 
+
+@media (min-width:750px) and (max-width:1250px){
+    #main-tabla-de-goleadores{
+        .list{
+            display: flex;
+            flex-flow:column wrap;
+            justify-content: center;
+            align-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            .goleador{
+                display: grid;
+                grid-template-columns: 2fr 4fr;
+                grid-template-rows: 1fr;
+                padding: 1rem;
+                    .goleador-posicion{
+                        align-self: center;
+                        margin: 1rem;
+                        width:100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        background-color: $hoverazulmafa;
+                        display: flex;
+                        flex-direction: row;
+                        align-items:center;
+                        justify-content: center;
+                        h3 {
+                            text-align: center;
+                            font-size: 3rem;
+                            color: white;
+                        }
+                    }
+                    .goleador-data{
+                        display: grid;
+                        grid-template-rows: repeat(2,1fr);
+                        grid-template-columns: repeat(3,1fr);
+                        border:1px solid white;
+                        width: 50vw;
+                        height: 40vh;
+                        border-radius: 20px;
+                        padding-left: 1.5rem;
+                        padding-right: 1.5rem;
+                        padding-top:1rem;
+                        background-color: $hoverazulmafa;
+                        .rounded-foto{
+                            grid-row: 2fr;
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-items: center;
+                            img {
+                                width: 150px;
+                                height: 150px;
+                                border-radius: 100%;
+                            }
+                            h2,h3 {
+                                margin-top: 1rem;
+                                text-align: center;
+                            }
+                            h2{font-size: 1.7rem;}
+                            h3{font-size: 1.2rem;}
+                        }
+                        .goles-partidos{
+                            grid-row: 2fr;
+                            grid-column: 1fr;
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: center;
+                            justify-content: center;
+                            div{
+                                h2{
+                                font-size: 3rem;
+                                } 
+                                img{
+                                    width:2rem ;
+                                }
+                            }
+                            h3 {
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .partidos{
+                            grid-column: 1fr;
+                            grid-row:2fr;
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: center;
+                            justify-content: center;
+                            ul{
+                                li{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    }    
+} 
