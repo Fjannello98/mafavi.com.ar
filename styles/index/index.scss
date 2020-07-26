@@ -66,8 +66,8 @@ $hoverazulmafa:  #5a6bbe;
 
     .card{
         position: relative;
-        width: 20vw;
-        height: 31.5vh;
+        width: 30vw;
+        height: 50vh;
         background-color: white;
         border: 1px solid black;
         border-radius: 10px;
@@ -83,16 +83,16 @@ $hoverazulmafa:  #5a6bbe;
         }
             .card-foto{
                 width:100%;
-                height: 80%;
+                height: 42.5vh;
                 border-top-right-radius: 10px;
                 border-top-left-radius: 10px;
             }
             .card-text{
                 background-image: linear-gradient($hoverazulmafa,$azulmafa,$hoverazulmafa);
                 color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                position: relative;
+                z-index: 2;
+                opacity: .7;
                 height: 30%;
                 padding: 0.2rem;
                 border-bottom: 1px solid white;
@@ -102,12 +102,12 @@ $hoverazulmafa:  #5a6bbe;
                       top:2px !important;
                   }
                   p {
-                      font-size: 13px;
+                      font-size: 1rem;
                   }
                 display: none;  
             }
             .card-foot{
-                height: 15%;
+                height: 7.5vh;
                 position: relative;
                 bottom: 0 !important;
                 padding-top: 3px;
@@ -118,6 +118,9 @@ $hoverazulmafa:  #5a6bbe;
                     width: 20%;
                     font-size:10px ;
                     padding:0.1rem;
+                    i {
+                        font-size: 1rem;
+                    }
                 }
             }
     }    
@@ -126,7 +129,50 @@ $hoverazulmafa:  #5a6bbe;
 
 
 
-
+@media (min-width:700px) and (max-width:1000px){
+    .main-foto{
+        #main {
+            margin-top: 10vh;
+            font-size: 1.3rem!important;
+        }
+        #subs{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between !important;
+            #sub1 , #sub2 {
+                width: 30vw !important;
+                height: 60vh !important;
+                font-size: 0.9rem !important;
+                margin:10vh;
+            }
+            #sub1{
+                align-self: flex-start;
+            }
+            
+            #sub2{
+                align-self: flex-end;
+            }
+        }
+    }
+    #index_cards{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10rem;
+        .card {
+            right:20vw !important;
+            left:20vw !important;
+            width:60vw !important;
+            margin-bottom: 5rem;
+            .card-text{
+                p{
+                    font-size:1rem !important;
+                }
+            }
+        }
+    }
+}
 
 @media (max-width:1000px){
     .main-foto{
@@ -138,7 +184,7 @@ $hoverazulmafa:  #5a6bbe;
          }
         #main {
             width: 60vw;
-            left: 15vw!important;
+            left: 15vw;
             height: 20vh;
             top: 25vh;
             font-size: 0.8rem ;
@@ -151,11 +197,11 @@ $hoverazulmafa:  #5a6bbe;
                 position: relative;
                 width: 95%;
                 font-size: 0.7rem;
-                padding: 0!important;
-                left: 0!important;
+                padding: 0;
+                left: 0;
                 margin-bottom:10vh;
             }
-            bottom: 60vh !important;
+            bottom: 60vh;
         }
     }
     #index_cards{
